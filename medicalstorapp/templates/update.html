@@ -1,0 +1,57 @@
+{% extends 'layout/b-layout.html' %}
+{% block 'content' %}
+<style>
+    .hello {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        margin-top: 30px; 
+    }
+    #demo {
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0,68,255);
+    }
+    input[type="text"], input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="TextField"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #0044ff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0000dd;
+    }
+</style>
+<div class="hello">
+    <form id="demo" action="" method="POST" class="center-form">
+        {% csrf_token %}
+        <label for="">Name</label><br>
+        {{form.name}}<br>
+        <label for="">description</label><br>
+        {{form.description}}<br>
+        <label for="">price</label><br>
+        {{form.price}}<br><br>
+        <input type="submit" value="update">
+    </form>
+</div>
+{% endblock %}

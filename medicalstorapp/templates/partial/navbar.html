@@ -1,0 +1,16 @@
+<nav style="border: 1px solid black; padding: 20px; background-color: #0044ff; display: flex; justify-content: space-between;">
+    <div>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'create' %}">createproduct</a>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'retrive' %}">retrive</a>
+    </div>
+    <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'medicine_search' %}">
+        {% csrf_token %}
+        <input class="form-control mr-sm-2" type="search" placeholder="Search....."  name="search_query">
+        <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+    <div>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'login' %}">Login</a>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'signup' %}">Signup</a>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'logout' %}">logout</a>
+    </div>
+</nav>

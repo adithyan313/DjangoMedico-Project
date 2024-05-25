@@ -1,0 +1,35 @@
+{% extends 'layout/h-layout.html' %}
+{% block 'content' %}
+<center><h1 style="margin: 20px;">Medicine List</h1></center>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="table-responsive">
+                <table class="table table-bordered" style="margin-top: 20px;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Medical ID</th>
+                            <th scope="col" style="text-align: center;">Medicine Name</th>
+                            <th scope="col" style="text-align: center;">Medicine Description</th>
+                            <th scope="col">Medicine Price</th>
+                            <th scope="col" colspan="2" style="text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for medi in medic %}
+                        <tr>
+                            <td>{{ medi.id }}</td>
+                            <td>{{ medi.name }}</td>
+                            <td>{{ medi.description }}</td>
+                            <td>{{ medi.price }}</td>
+                            <td><a href="{% url 'update' medi.id %}" class="btn btn-primary" role="button">Edit</a></td>
+                            <td><a href="{% url 'delete' medi.id %}" class="btn btn-danger" role="button">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicine Search</title>
+</head>
+<body>
+    <nav style="border: 1px solid black; padding: 20px; background-color: gray; margin: auto;">
+        <form method="GET" action="{% url 'searchresult' %}">
+            <input type="text" name="q" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'create' %}">createproduct</a>
+        <a id="css" style="padding: 10px; text-decoration: none; color: whitesmoke;" href="{% url 'retrive' %}">retrive</a>
+    </nav>
+</body>
+</html>

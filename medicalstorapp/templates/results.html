@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <center><h1>Search Results</h1></center>
+    <center><table>
+        {% for medicines in medicine %}
+        <tr>
+            <center><td style="color: green;">{{ medicines.name }} - {{ medicines.description }} - {{ medicines.price }}₹</td></center>
+        </tr>    
+        {% empty %}
+        <tr>
+            <center><td style="color: red;">No medicines found</td></center>
+        </tr>
+        {% endfor %}
+    </table></center>
+</body>
+</html>

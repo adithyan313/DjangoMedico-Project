@@ -1,0 +1,13 @@
+{% extends 'layout/h-layout.html' %}
+{% block 'content' %}
+<h1>log out</h1>
+{% if user.is_authenticated %}
+<p>you are currently loged in as <b style="color: red;">{{user.username}}</b>.</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <button type="submit">log out</button>
+</form>
+{% else %}
+<p style="color: yellow;">you are not currently loged in.</p>
+{% endif %}
+{% endblock %}
