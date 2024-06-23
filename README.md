@@ -1,0 +1,2 @@
+
+Developed a Django application and REST API for managing a medical store, enabling users to perform CRUD operations on medicines. Key features include user signup and login functionality, the ability to add, edit, and delete medicines, as well as list and search for medicines. The Django REST API provides JSON responses for all requests, supporting user authentication and allowing for adding, editing, deleting, listing, and searching medicines. The API was thoroughly tested using Postman to ensure functionality and reliability.
